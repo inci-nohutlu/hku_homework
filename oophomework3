@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("1. Notu girin: ");
+        double not1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("2. Notu girin: ");
+        double not2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("3. Notu girin: ");
+        double not3 = Convert.ToDouble(Console.ReadLine());
+
+        double toplam = not1 + not2 + not3;
+        double ortalama = toplam / 3.0;
+
+        Console.WriteLine($"Toplam: {toplam}");
+        Console.WriteLine($"Ortalama: {ortalama:F2}");
+
+        if (ortalama >= 60)
+        {
+            Console.WriteLine("Ortalama 60 veya üzeri: Başarılı");
+        }
+        else
+        {
+            Console.WriteLine("Ortalama 60'tan küçük: Başarısız");
+        }
+    }
+}
