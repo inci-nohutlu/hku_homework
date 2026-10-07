@@ -1,0 +1,18 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("3 basamaklı bir sayı girin: ");
+        int sayi = Convert.ToInt32(Console.ReadLine());
+
+        int yuzler = sayi / 100;
+        int onlar = (sayi / 10) % 10;
+        int birler = sayi % 10;
+
+        Console.WriteLine($"Yüzler Basamaği: {yuzler}");
+        Console.WriteLine($"Onlar i: {onlar}");
+        Console.WriteLine($"Birler Basamaği: {birler}");
+    }
+}
