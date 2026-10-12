@@ -1,0 +1,44 @@
+using System;
+
+int count = 0;
+double sum = 0;
+double highest = -1; 
+double lowest = 101;
+
+Console.Write("Enter grade (-1 to stop): ");
+double grade = double.Parse(Console.ReadLine());
+
+
+while (grade != -1)
+{
+    count++;
+    sum += grade;
+
+    if (grade > highest)
+    {
+        highest = grade;
+    }
+
+    if (grade < lowest)
+    {
+        lowest = grade;
+    }
+
+    
+    Console.Write("Enter grade (-1 to stop): ");
+    grade = double.Parse(Console.ReadLine());
+}
+
+if (count > 0)
+{
+    double average = sum / count;
+    Console.WriteLine($"Count: {count}");
+    Console.WriteLine($"Sum: {sum}");
+    Console.WriteLine($"Average: {average:F2}");
+    Console.WriteLine($"Highest: {highest}");
+    Console.WriteLine($"Lowest: {lowest}");
+}
+else
+{
+    Console.WriteLine("No grades entered.");
+}
